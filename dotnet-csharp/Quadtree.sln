@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quadtree.Algorithm", "Quadtree.Algorithm\Quadtree.Algorithm.csproj", "{1C941377-7FF6-456E-96EF-26378D56B351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quadtree.Tests", "Quadtree.Tests\Quadtree.Tests.csproj", "{5BBB0644-92CF-4633-BCF9-00B04C9CFC0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C941377-7FF6-456E-96EF-26378D56B351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C941377-7FF6-456E-96EF-26378D56B351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C941377-7FF6-456E-96EF-26378D56B351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C941377-7FF6-456E-96EF-26378D56B351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBB0644-92CF-4633-BCF9-00B04C9CFC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBB0644-92CF-4633-BCF9-00B04C9CFC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBB0644-92CF-4633-BCF9-00B04C9CFC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBB0644-92CF-4633-BCF9-00B04C9CFC0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
