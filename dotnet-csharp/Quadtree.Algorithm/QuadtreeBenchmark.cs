@@ -17,8 +17,6 @@ public class BenchmarkConfig : ManualConfig {
         AddColumn(StatisticColumn.P90);
         AddColumn(StatisticColumn.P95);
         AddColumn(StatisticColumn.Iterations);
-
-        SummaryStyle = SummaryStyle.Default.WithTimeUnit(TimeUnit.Millisecond);
     }
 }
 
