@@ -1,32 +1,11 @@
-#[derive(Debug, Clone, Copy)]
-struct Point {
-    x: f64,
-    y: f64
-}
+pub mod geometry;
+pub mod unsafe_implementation;
+pub mod smallvec_implementation;
+pub mod query_optimization;
 
-#[derive(Debug, Clone, Copy)]
-struct Rectangle {
-    x: f64,
-    y: f64,
-    width: f64,
-    height: f64
-}
-
-impl Rectangle {
-    fn contains(&self, point: &Point) -> bool {
-        point.x >= self.x
-        && point.x <= self.x + self.width
-        && point.y >= self.y
-        && point.y <= self.y + self.height
-    }
-
-    fn intersects(&self, other: &Rectangle) -> bool {
-        other.x < self.x + self.width
-        && other.x + other.width > self.x
-        && other.y < self.y + self.height
-        && other.y + other.height > self.y
-    }
-}
+use geometry::{Point, Rectangle};
+use query_optimization::{QuadtreeRayon, QuadtreeBuffer};
+use crate::smallvec_implementation::QuadtreeSmallVec;
 
 #[derive(Debug)]
 struct Quadtree {
@@ -149,7 +128,12 @@ impl Quadtree {
 
 fn main() {
     let boundary = Rectangle { x: 0.0, y: 0.0, width: 200.0, height: 200.0 };
-    let mut qtree = Quadtree::new(boundary, 4);
+    // let mut qtree = Quadtree::new(boundary, 4);
+    // let mut qtree = QuadtreeUnsafe::new(boundary);
+    // let mut qtree = QuadtreeSmallVec::new(boundary);
+    let mut qtree = QuadtreeSmallVec::new(boundary);
+
+
 
     qtree.insert(Point { x: 50.0, y: 50.0 });
     qtree.insert(Point { x: 150.0, y: 150.0 });

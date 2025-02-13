@@ -1,6 +1,10 @@
 [package]
-name = "rust"
+name = "quadtree"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+smallvec = "1.13.2"
+rayon = "1.10.0"
+criterion = "0.5.1"
+rand = "0.9.0"
