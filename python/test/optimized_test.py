@@ -26,7 +26,7 @@ class TestQuadtreeOptimized(unittest.TestCase):
         quadtree.plot(ax)
 
         # Uncomment this line to plot the points
-        # plot_points(points, ax, query_patch=query_rect, found_points=found)
+        plot_points(points, ax, query_patch=query_rect, found_points=found)
 
         self.assertEqual(expected_points, found)
 
